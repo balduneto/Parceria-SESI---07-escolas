@@ -112,11 +112,11 @@
                     </select>
                 </div>
                 <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <span class="text-xs font-bold text-slate-500 block uppercase">Vigência Letiva</span>
+                    <span class="text-xs font-bold text-slate-500 block uppercase">Período Letivo Estimado</span>
                     <span class="text-2xl font-black text-cyan-700">180 dias</span>
                 </div>
                 <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <span class="text-xs font-bold text-slate-500 block uppercase">Base de Cálculo</span>
+                    <span class="text-xs font-bold text-slate-500 block uppercase">Turmas Efetivas (Base)</span>
                     <span id="bl2-turmas-calc" class="text-2xl font-black text-cyan-700">0 Turmas</span>
                 </div>
             </div>
@@ -160,12 +160,12 @@
                     <span id="opex-custo-professores" class="font-bold text-slate-700 text-sm block mt-1">R$ 0,00</span>
                 </div>
                 <div class="bg-orange-50 p-4 rounded-xl border border-orange-100 text-center shadow-sm">
-                    <span class="text-[10px] font-bold text-orange-600 block uppercase tracking-tight">Alimentação</span>
-                    <span id="opex-custo-refeicoes" class="font-bold text-orange-800 text-sm block mt-1">R$ 0,00</span>
+                    <span class="text-[10px] font-bold text-orange-600 block uppercase tracking-tight text-center">Alimentação</span>
+                    <span id="opex-custo-refeicoes" class="font-bold text-orange-800 text-sm block mt-1 text-center">R$ 0,00</span>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
                     <span class="text-[10px] font-bold text-slate-400 block uppercase tracking-tight text-center">Equipe Técnica</span>
-                    <span id="opex-custo-equipe" class="font-bold text-slate-700 text-sm block mt-1">R$ 0,00</span>
+                    <span id="opex-custo-equipe" class="font-bold text-slate-700 text-sm block mt-1 text-center">R$ 0,00</span>
                 </div>
                 <div class="bg-cyan-700 text-white p-4 rounded-xl text-center flex flex-col justify-center shadow-lg transition-transform hover:scale-105">
                     <span class="text-[10px] font-bold opacity-80 block uppercase tracking-wider">Total OPEX</span>
@@ -226,7 +226,7 @@
                     </select>
                 </div>
                 <div class="flex flex-col justify-center items-end space-y-2 px-2">
-                    <div class="text-sm text-slate-400 flex justify-between w-full max-w-xs"><span>Investimento em Docência:</span> <span id="total-opex-consolidado" class="font-bold text-white">R$ 0,00</span></div>
+                    <div class="text-sm text-slate-400 flex justify-between w-full max-w-xs"><span>Investimento em Docência/Alim:</span> <span id="total-opex-consolidado" class="font-bold text-white">R$ 0,00</span></div>
                     <div class="text-sm text-slate-400 flex justify-between w-full max-w-xs"><span>Investimento em Infra/Material:</span> <span id="total-capex-consolidado" class="font-bold text-white">R$ 0,00</span></div>
                     <div id="bl4-ajuste-pagamento-display" class="text-xs font-black text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">Ajuste Financeiro: R$ 0,00</div>
                 </div>
@@ -234,7 +234,7 @@
 
             <div class="bg-gradient-to-r from-cyan-600 to-blue-600 p-10 md:p-12 rounded-3xl text-center shadow-inner relative z-10">
                 <span class="block text-sm font-bold opacity-90 uppercase tracking-[0.3em] mb-3 text-white">Investimento Total da Parceria</span>
-                <span id="total-geral-proposta" class="block text-4xl md:text-7xl font-black tracking-tighter drop-shadow-xl">R$ 0,00</span>
+                <span id="total-geral-proposta" class="block text-4xl md:text-7xl font-black tracking-tighter drop-shadow-xl text-center w-full">R$ 0,00</span>
             </div>
         </section>
 
@@ -253,18 +253,18 @@
     </div>
 
 <script>
-    // --- DADOS DAS 7 ESCOLAS (conforme imagem) ---
+    // --- DADOS DAS 7 ESCOLAS ATUALIZADOS ---
     const dadosEscolas = [
-        { id: 1, cre: "Brasil", nome: "EM Cel. José Viana", alunos: 312, turmas: 12 },
-        { id: 2, cre: "Thomé", nome: "EM José Alves Vila Nova", alunos: 308, turmas: 12 },
-        { id: 3, cre: "Thomé", nome: "EM Prof. Trajano de Sá Guimarães", alunos: 375, turmas: 12 },
-        { id: 4, cre: "Bretas", nome: "EM Profª Cleonice Monteiro Wolney", alunos: 160, turmas: 8 },
-        { id: 5, cre: "Central", nome: "EM João Clarimundo de Oliveira", alunos: 190, turmas: 8 },
-        { id: 6, cre: "Jarbas", nome: "EM Dom Tomás Balduino", alunos: 304, turmas: 12 },
-        { id: 7, cre: "Jarbas", nome: "EM Renascer", alunos: 378, turmas: 14 }
+        { id: 1, cre: "Brasil", nome: "EM Cel. José Viana", alunos: 263, turmas: 12 },
+        { id: 2, cre: "Thomé", nome: "EM José Alves Vila Nova", alunos: 265, turmas: 13 },
+        { id: 3, cre: "Thomé", nome: "EM Prof. Trajano de Sá Guimarães", alunos: 266, turmas: 12 },
+        { id: 4, cre: "Bretas", nome: "EM Profª Cleonice Monteiro Wolney", alunos: 180, turmas: 9 },
+        { id: 5, cre: "Central", nome: "EM João Clarimundo de Oliveira", alunos: 143, turmas: 8 },
+        { id: 6, cre: "Jarbas", nome: "EM Dom Tomás Balduino", alunos: 242, turmas: 12 },
+        { id: 7, cre: "Jarbas", nome: "EM Renascer", alunos: 415, turmas: 16 }
     ];
 
-    // --- DADOS CAPEX (ATUALIZADO COM OS VALORES DO NOVO EDITAL) ---
+    // --- DADOS CAPEX ---
     const dadosCapex = [
         { id: 'c1', produto: "Desenv. de Apps (Laboratório)", qtd: 1, unidade: 'grupo3', vlrAquisicao: 90000.00, vlrLocacao: 13500.00 },
         { id: 'c2', produto: "Robótica Educacional", qtd: 1, unidade: 'escola', vlrAquisicao: 159680.00, vlrLocacao: 11976.00 },
@@ -367,8 +367,8 @@
         document.getElementById('total-escolas').innerText = escolas;
         document.getElementById('total-turmas').innerText = turmasBase;
         document.getElementById('bl2-turmas-calc').innerText = `${turmasBase} Turmas`;
-        document.getElementById('total-alunos-base').innerText = alunosBase;
-        document.getElementById('total-alunos-final').innerText = totalAlFinal;
+        document.getElementById('total-alunos-base').innerText = alunosBase.toLocaleString('pt-BR');
+        document.getElementById('total-alunos-final').innerText = totalAlFinal.toLocaleString('pt-BR');
 
         const periodo = 9;
         const diasLetivos = 180;
@@ -399,7 +399,8 @@
             const isChecked = row.querySelector('.capex-check').checked;
             const qtd = parseFloat(row.querySelector('.capex-qtd').value) || 0;
             const vlrB = parseFloat(row.querySelector('.capex-vlr-base').value) || 0;
-            const opt = row.querySelector('input[type=radio]:checked').value;
+            const radioSel = row.querySelector('input[type=radio]:checked');
+            const opt = radioSel ? radioSel.value : 'aquisicao';
             const dispLoc = row.querySelector('.capex-display-locacao');
 
             let vlrFinal = vlrB;
@@ -492,7 +493,8 @@
                 if(row.querySelector('.capex-check').checked) {
                     const id = row.dataset.id;
                     const itemData = dadosCapex.find(d => d.id === id);
-                    const radio = row.querySelector('input[type=radio]:checked').value;
+                    const radioSel = row.querySelector('input[type=radio]:checked');
+                    const radio = radioSel ? radioSel.value : 'aquisicao';
                     const vlrBase = parseFloat(row.querySelector('.capex-vlr-base').value) || 0;
                     const vlrU = radio === 'aquisicao' ? vlrBase : (itemData.vlrLocacao || vlrBase * 0.3);
 
